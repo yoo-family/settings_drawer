@@ -1,6 +1,6 @@
 name: settings_drawer
 description: "Theme and language picker tiles for a Flutter app drawer, with persisted ThemeMode/Locale state — composable building blocks plus an optional ready-made drawer."
-version: 0.1.0
+version: 0.1.1
 repository: https://github.com/yoo-family/settings_drawer
 issue_tracker: https://github.com/yoo-family/settings_drawer/issues
 
