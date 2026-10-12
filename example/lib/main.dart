@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:settings_drawer/settings_drawer.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -60,7 +61,13 @@ class HomePage extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.open_in_browser_outlined),
             title: const Text('Visit website'),
-            onTap: () => Navigator.of(context).pop(),
+            onTap: () async {
+              Navigator.of(context).pop();
+              await launchUrl(
+                Uri.parse('https://pub.dev/packages/settings_drawer'),
+                mode: LaunchMode.externalApplication,
+              );
+            },
           ),
         ],
       ),
